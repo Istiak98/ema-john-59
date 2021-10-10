@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link ,useLocation} from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import './Login.css'
 const Login = () => {
 
     const{signInUsingGoogle}=useAuth();
+    const location=useLocation();
+    console.log('came from',location.state?.from)
   return (
     <div className='login-form'>
       <div>
